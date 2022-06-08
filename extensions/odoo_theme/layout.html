@@ -63,6 +63,12 @@
     </noscript>
     {# Shown when the JS has properly set all the classes on the TOC elements #}
     <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
+        {%- if 'hide-page-toc' not in meta %}
+            {# Shown when the JS has properly set all the classes on the TOC elements #}
+            <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pb-3 mb-4" hidden>
+                {%- include "layout_templates/page_toc.html" %}
+            </aside>
+        {%- endif %}
         {%- include "layout_templates/menu.html" %}
     </nav>
     <header class="o_main_header border-bottom navbar navbar-light navbar-expand-lg">
