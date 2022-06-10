@@ -227,18 +227,19 @@ header.o_main_header {
             font-weight: 600;
         }
     }
-
-    > ul {
-        li {
-            &.o_active_toc_entry {
-                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    color: $o-violet-dark;
+    .o_main_toc {
+        > ul {
+            li {
+                &.o_active_toc_entry {
+                    &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+                        color: $o-violet-dark;
+                    }
                 }
-            }
 
-            a {
-                &.current {
-                    color: $o-violet-dark;
+                a {
+                    &.current {
+                        color: $o-violet-dark;
+                    }
                 }
             }
         }
@@ -294,7 +295,7 @@ header.o_main_header {
     }
 }
 
-.o_side_nav, .o_page_toc_nav {
+.o_main_toc, .o_page_toc_nav {
     ul { // all uls in toc
         list-style: none;
         padding-left: $padding-s;
